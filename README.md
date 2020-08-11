@@ -8,7 +8,7 @@
 | last_name           | string | null: false |
 | first_name_furigana | string | null: false |
 | last_name_furigana  | string | null: false |
-| birthday            | string | null: false |
+| birthday            | data   | null: false |
 | nick_name           | string | null: false |
 | email               | string | null: false |
 | password            | string | null: false |
@@ -21,16 +21,16 @@
 
 ## items テーブル
 
-| Column          | Type   | Options     |
-| --------------- | ------ | ----------- |
-| name            | string | null: false |
-| explanation     | text   | null: false |
-| selling_price   | string | null: false |
-| category        | string | null: false |
-| Status          | string | null: false |
-| shipping burden | string | null: false |
-| shipping area   | string | null: false |
-| shipping days   | string | null: false |
+| Column          | Type    | Options     |
+| --------------- | --------| ----------- |
+| name            | string  | null: false |
+| explanation     | text    | null: false |
+| price           | integer | null: false |
+| category        | integer | null: false |
+| Status          | integer | null: false |
+| shipping burden | integer | null: false |
+| shipping area   | integer | null: false |
+| shipping days   | integer | null: false |
 
 ### Association
 
