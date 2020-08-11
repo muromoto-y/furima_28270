@@ -1,71 +1,24 @@
-# テーブル設計
+# README
 
-## users テーブル
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-| Column     | Type   | Options     |
-| ---------- | ------ | ----------- |
-| first_name | string | null: false |
-| last_name  | string | null: false |
-| nick_name  | string | null: false |
-| email      | string | null: false |
-| password   | string | null: false |
+Things you may want to cover:
 
-### Association
+* Ruby version
 
-- has_many :items
-- has_many :deliveries
-- has_many :purchase
+* System dependencies
 
-## items テーブル
+* Configuration
 
-| Column           | Type   | Options     |
-| ---------------- | ------ | ----------- |
-| item_name        | string | null: false |
-| item_explanation | text   | null: false |
-| selling_price    | string | null: false |
+* Database creation
 
-### Association
+* Database initialization
 
-- has_many :deliveries, through: item_deliveries
-- belongs_to :user
-- has_one :purchase
+* How to run the test suite
 
-## item_deliveries テーブル
+* Services (job queues, cache servers, search engines, etc.)
 
-| Column     | Type       | Options                        |
-| ---------- | ---------- | ------------------------------ |
-| item       | references | null: false, foreign_key: true |
-| delivery   | references | null: false, foreign_key: true |
+* Deployment instructions
 
-### Association
-
-- belongs_to :item
-- belongs_to :delivery
-
-## deliveries テーブル
-
-| Column        | Type   | Options     |
-| ------------- | ------ | ----------- |
-| post_code     | string | null: false |
-| city          | string | null: false |
-| address       | string | null: false |
-| building_name | string |             |
-| phone_number  | string | null: false |
-
-### Association
-
-- belongs_to :user
-- has_many :items, through: item_deliveries
-
-# purchase テーブル
-
-| Column      | Type   | Options     |
-| ----------- | ------ | ----------- |
-| deadline    | string | null: false |
-| card_number | string | null: false |
-| security    | string | null: false |
-
-### Association
-
-- belongs_to :user
-- has_one :item
+* ...
