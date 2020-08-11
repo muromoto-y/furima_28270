@@ -54,6 +54,9 @@
 
 # purchase テーブル
 
+| item | references | foreign_key: true |
+| user | references | foreign_key: true |
+
 ### Association
 
 - belongs_to :user
